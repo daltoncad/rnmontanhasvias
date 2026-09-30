@@ -767,13 +767,26 @@ function fnc_project_color(values, context) {
 
 
 function exp_label_MEDviasURBANAS_2_eval_expression(context) {
-    // concat(NM_TIP_LOG, ' ', NM_TIT_LOG, ' ', NM_LOG, ' ', DIM_LOG, 'm')
+    // concat('Id: ', id, ' - ', NM_TIP_LOG, ' ', NM_TIT_LOG, ' ', NM_LOG, ' ', DIM_LOG, 'm')
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return fnc_concat([feature.get('NM_TIP_LOG') ,' ',feature.get('NM_TIT_LOG') ,' ',feature.get('NM_LOG') ,' ',feature.get('DIM_LOG') ,'m'], context);
+        return fnc_concat(['Id: ',feature.get('id') ,' - ',feature.get('NM_TIP_LOG') ,' ',feature.get('NM_TIT_LOG') ,' ',feature.get('NM_LOG') ,' ',feature.get('DIM_LOG') ,'m'], context);
     } else {
-        return fnc_concat([feature.get('NM_TIP_LOG') ,' ',feature.get('NM_TIT_LOG') ,' ',feature.get('NM_LOG') ,' ',feature.get('DIM_LOG') ,'m'], context);
+        return fnc_concat(['Id: ',feature.get('id') ,' - ',feature.get('NM_TIP_LOG') ,' ',feature.get('NM_TIT_LOG') ,' ',feature.get('NM_LOG') ,' ',feature.get('DIM_LOG') ,'m'], context);
+    }
+}
+
+
+function exp_label_MEDbairrosSEP_3_eval_expression(context) {
+    // concat(NM_BAIRRO, ' - ', SETOR)
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return fnc_concat([feature.get('NM_BAIRRO') ,' - ',feature.get('SETOR') ], context);
+    } else {
+        return fnc_concat([feature.get('NM_BAIRRO') ,' - ',feature.get('SETOR') ], context);
     }
 }

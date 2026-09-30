@@ -37,30 +37,48 @@ var lyr_MEDviasURBANAS_2 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/MEDviasURBANAS_2.png" /> MEDviasURBANAS'
             });
-var format_RN_Municipios_2022_3 = new ol.format.GeoJSON();
-var features_RN_Municipios_2022_3 = format_RN_Municipios_2022_3.readFeatures(json_RN_Municipios_2022_3, 
+var format_MEDbairrosSEP_3 = new ol.format.GeoJSON();
+var features_MEDbairrosSEP_3 = format_MEDbairrosSEP_3.readFeatures(json_MEDbairrosSEP_3, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_RN_Municipios_2022_3 = new ol.source.Vector({
+var jsonSource_MEDbairrosSEP_3 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_RN_Municipios_2022_3.addFeatures(features_RN_Municipios_2022_3);
-var lyr_RN_Municipios_2022_3 = new ol.layer.Vector({
+jsonSource_MEDbairrosSEP_3.addFeatures(features_MEDbairrosSEP_3);
+var lyr_MEDbairrosSEP_3 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_RN_Municipios_2022_3, 
-                style: style_RN_Municipios_2022_3,
+                source:jsonSource_MEDbairrosSEP_3, 
+                style: style_MEDbairrosSEP_3,
+                popuplayertitle: 'MEDbairrosSEP',
+                interactive: true,
+                title: '<img src="styles/legend/MEDbairrosSEP_3.png" /> MEDbairrosSEP'
+            });
+var format_RN_Municipios_2022_4 = new ol.format.GeoJSON();
+var features_RN_Municipios_2022_4 = format_RN_Municipios_2022_4.readFeatures(json_RN_Municipios_2022_4, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_RN_Municipios_2022_4 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_RN_Municipios_2022_4.addFeatures(features_RN_Municipios_2022_4);
+var lyr_RN_Municipios_2022_4 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_RN_Municipios_2022_4, 
+                style: style_RN_Municipios_2022_4,
                 popuplayertitle: 'RN_Municipios_2022',
                 interactive: true,
-                title: '<img src="styles/legend/RN_Municipios_2022_3.png" /> RN_Municipios_2022'
+                title: '<img src="styles/legend/RN_Municipios_2022_4.png" /> RN_Municipios_2022'
             });
 
-lyr_EsriImagery_0.setVisible(true);lyr_GoogleSatellite_1.setVisible(true);lyr_MEDviasURBANAS_2.setVisible(true);lyr_RN_Municipios_2022_3.setVisible(true);
-var layersList = [lyr_EsriImagery_0,lyr_GoogleSatellite_1,lyr_MEDviasURBANAS_2,lyr_RN_Municipios_2022_3];
-lyr_MEDviasURBANAS_2.set('fieldAliases', {'id': 'id', 'NM_TIP_LOG': 'NM_TIP_LOG', 'NM_TIT_LOG': 'NM_TIT_LOG', 'NM_LOG': 'NM_LOG', 'DIM_LOG': 'DIM_LOG', 'LARG_LOG': 'LARG_LOG', 'OBS_TEXTO': 'OBS_TEXTO', });
-lyr_RN_Municipios_2022_3.set('fieldAliases', {'CD_MUN': 'CD_MUN', 'NM_MUN': 'NM_MUN', 'SIGLA_UF': 'SIGLA_UF', 'AREA_KM2': 'AREA_KM2', 'VALORTOTAL': 'VALORTOTAL', });
-lyr_MEDviasURBANAS_2.set('fieldImages', {'id': 'TextEdit', 'NM_TIP_LOG': 'TextEdit', 'NM_TIT_LOG': 'TextEdit', 'NM_LOG': 'TextEdit', 'DIM_LOG': 'TextEdit', 'LARG_LOG': 'TextEdit', 'OBS_TEXTO': 'TextEdit', });
-lyr_RN_Municipios_2022_3.set('fieldImages', {'CD_MUN': 'TextEdit', 'NM_MUN': 'TextEdit', 'SIGLA_UF': 'TextEdit', 'AREA_KM2': 'TextEdit', 'VALORTOTAL': 'TextEdit', });
-lyr_MEDviasURBANAS_2.set('fieldLabels', {'id': 'no label', 'NM_TIP_LOG': 'no label', 'NM_TIT_LOG': 'no label', 'NM_LOG': 'no label', 'DIM_LOG': 'no label', 'LARG_LOG': 'no label', 'OBS_TEXTO': 'no label', });
-lyr_RN_Municipios_2022_3.set('fieldLabels', {'CD_MUN': 'no label', 'NM_MUN': 'no label', 'SIGLA_UF': 'no label', 'AREA_KM2': 'no label', 'VALORTOTAL': 'no label', });
-lyr_RN_Municipios_2022_3.on('precompose', function(evt) {
+lyr_EsriImagery_0.setVisible(true);lyr_GoogleSatellite_1.setVisible(true);lyr_MEDviasURBANAS_2.setVisible(true);lyr_MEDbairrosSEP_3.setVisible(true);lyr_RN_Municipios_2022_4.setVisible(true);
+var layersList = [lyr_EsriImagery_0,lyr_GoogleSatellite_1,lyr_MEDviasURBANAS_2,lyr_MEDbairrosSEP_3,lyr_RN_Municipios_2022_4];
+lyr_MEDviasURBANAS_2.set('fieldAliases', {'id': 'id', 'NM_TIP_LOG': 'NM_TIP_LOG', 'NM_TIT_LOG': 'NM_TIT_LOG', 'NM_LOG': 'NM_LOG', 'DIM_LOG': 'DIM_LOG', 'LARG_LOG': 'LARG_LOG', 'OBS_TEXTO': 'OBS_TEXTO', 'NM_BAIRRO': 'NM_BAIRRO', });
+lyr_MEDbairrosSEP_3.set('fieldAliases', {'id': 'id', 'NM_BAIRRO': 'NM_BAIRRO', 'SETOR': 'SETOR', 'timestamp': 'timestamp', 'begin': 'begin', 'end': 'end', });
+lyr_RN_Municipios_2022_4.set('fieldAliases', {'CD_MUN': 'CD_MUN', 'NM_MUN': 'NM_MUN', 'SIGLA_UF': 'SIGLA_UF', 'AREA_KM2': 'AREA_KM2', 'VALORTOTAL': 'VALORTOTAL', });
+lyr_MEDviasURBANAS_2.set('fieldImages', {'id': 'TextEdit', 'NM_TIP_LOG': 'TextEdit', 'NM_TIT_LOG': 'TextEdit', 'NM_LOG': 'TextEdit', 'DIM_LOG': 'TextEdit', 'LARG_LOG': 'TextEdit', 'OBS_TEXTO': 'TextEdit', 'NM_BAIRRO': 'TextEdit', });
+lyr_MEDbairrosSEP_3.set('fieldImages', {'id': 'TextEdit', 'NM_BAIRRO': 'TextEdit', 'SETOR': 'TextEdit', 'timestamp': 'TextEdit', 'begin': 'TextEdit', 'end': 'TextEdit', });
+lyr_RN_Municipios_2022_4.set('fieldImages', {'CD_MUN': 'TextEdit', 'NM_MUN': 'TextEdit', 'SIGLA_UF': 'TextEdit', 'AREA_KM2': 'TextEdit', 'VALORTOTAL': 'TextEdit', });
+lyr_MEDviasURBANAS_2.set('fieldLabels', {'id': 'no label', 'NM_TIP_LOG': 'no label', 'NM_TIT_LOG': 'no label', 'NM_LOG': 'no label', 'DIM_LOG': 'no label', 'LARG_LOG': 'no label', 'OBS_TEXTO': 'no label', 'NM_BAIRRO': 'no label', });
+lyr_MEDbairrosSEP_3.set('fieldLabels', {'id': 'no label', 'NM_BAIRRO': 'no label', 'SETOR': 'no label', 'timestamp': 'no label', 'begin': 'no label', 'end': 'no label', });
+lyr_RN_Municipios_2022_4.set('fieldLabels', {'CD_MUN': 'no label', 'NM_MUN': 'no label', 'SIGLA_UF': 'no label', 'AREA_KM2': 'no label', 'VALORTOTAL': 'no label', });
+lyr_RN_Municipios_2022_4.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
